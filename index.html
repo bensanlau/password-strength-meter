@@ -4,18 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Password Strength Meter</title>
+  <link rel="stylesheet" href="css/index.css" />
 </head>
 <body>
 
   <main>
 
-    <form action="" class="login">
-      <input type="email" name="email" id="login__email" />
-      <input type="password" name="password" id="login__password" />
-      <div class="passwordMeter">
-        password strength meter here  
+    <form action="" class="card">
+      <div class="formRow">
+        <label for="login__email">Email</label>
+        <input type="email" name="email" id="login__email" />
       </div>
-      <input type="submit" value="Log in" />
+      <div class="formRow">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" id="login__password" />
+      </div>
+      <div class="formRow">
+        <div class="passwordMeter">
+          password strength meter here  
+        </div>
+      </div>
+      <input class="button" type="submit" value="Log in" />
     </form>
 
   </main>
