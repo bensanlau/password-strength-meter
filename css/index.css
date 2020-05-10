@@ -1,11 +1,11 @@
 /* Import utitlities */
-@import 'normalize.css';
-@import 'variables.css';
+@import 'utils/normalize.css';
+@import 'utils/variables.css';
 
 /* Import components */
-@import 'button.css';
-@import 'card.css';
-@import 'form.css';
+@import 'components/button.css';
+@import 'components/card.css';
+@import 'components/form.css';
 
 html {
   background: linear-gradient(45deg, #0073b1, #0c8996);
@@ -15,5 +15,5 @@ html {
 }
 
 main {
-  margin: var(--spacingXL);
+  margin: var(--spacingXXL) var(--spacingS);
 }
