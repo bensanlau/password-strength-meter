@@ -5,11 +5,13 @@
 /* Import components */
 @import 'button.css';
 @import 'card.css';
+@import 'form.css';
 
 html {
-  background: #909090;
-  box-sizing: content-box;
+  background: linear-gradient(45deg, #0073b1, #0c8996);
+  background-attachment: fixed;
   font: 100%/1.5 -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+  color: var(--c_text-primary);
 }
 
 main {

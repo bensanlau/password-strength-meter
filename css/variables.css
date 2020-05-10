@@ -1,4 +1,11 @@
 :root {
+  /* Colours */
+  --c_primary: #0073b1;
+
+  --c_text-primary: #333;
+  --c_white: #fff;
+  --c_black: #000;
+
   /* Spacings  */
   --spacingXS: 8px;
   --spacingS: 16px;
@@ -6,6 +13,7 @@
   --spacingL: 32px;
   --spacingXL: 40px;
 
+  /* Border radius */
   --borderRadiusS: 4px;
   --borderRadiusM: 12px;
 }

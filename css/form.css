@@ -1,0 +1,14 @@
+.form__row {
+  margin-bottom: var(--spacingS);
+}
+
+.form__label {
+  display: inline-block;
+  margin-bottom: calc(var(--spacingXS) / 2);
+}
+
+.form__input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--spacingXS);
+}

@@ -7,27 +7,27 @@
   <link rel="stylesheet" href="css/index.css" />
 </head>
 <body>
-
   <main>
 
-    <form action="" class="card">
-      <div class="formRow">
-        <label for="login__email">Email</label>
-        <input type="email" name="email" id="login__email" />
-      </div>
-      <div class="formRow">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" id="login__password" />
-      </div>
-      <div class="formRow">
-        <div class="passwordMeter">
-          password strength meter here  
+    <div class="card">
+      <form action="" class="form">
+        <div class="form__row">
+          <label class="form__label" for="email">Email</label>
+          <input class="form__input" type="email" name="email" id="email" />
         </div>
-      </div>
-      <input class="button" type="submit" value="Log in" />
-    </form>
+        <div class="form__row">
+          <label class="form__label" for="password">Password</label>
+          <input class="form__input" type="password" name="password" id="password" />
+        </div>
+        <div class="form__row">
+          <div class="passwordMeter">
+            password strength meter here  
+          </div>
+        </div>
+        <input class="button button--primary" type="submit" value="Log in" />
+      </form>
+    </div>
 
   </main>
-
 </body>
 </html>
