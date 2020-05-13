@@ -19,12 +19,12 @@ function hasUppercase(value) {
 }
 
 function hasLowercase(value) {
-  const reg = /[a-z\u00C0-\u00FF]*/; // should cover most Latin based characters
+  const reg = /[a-z\u00C0-\u00FF]/; // should cover most Latin based characters
   return reg.test(value);
 }
 
 function hasSpecialChar(value) {
-  var reg = /[!@#\$%\^\&*\)\(\[\]\\\|\'\;\"\:\>\<\?\~\`+=._-]+/g;
+  var reg = /[!@#\$%\^\&*)(\[\]\\|';":><?~`/,{}+=._-]/; // should cover all on US keyboard layout
   return reg.test(value);
 }
 
@@ -37,5 +37,11 @@ function validate(value) {
 }
 
 if (passwordField) {
-  passwordField.addEventListener('keyup', e => validate(passwordField.value));
+  passwordField.addEventListener('keyup', e => {
+    const keyCode = e.which;
+    // Only validate when key press isn't a 'meta' key. Values from https://bit.ly/3bwddJN
+    if (keyCode >= 48 && keyCode <= 90 || keyCode >= 96 && keyCode >= 111 || keyCode >= 186 && keycode <= 222) {
+      validate(passwordField.value)
+    }
+  });
 }
