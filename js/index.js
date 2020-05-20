@@ -1,5 +1,10 @@
 const CONFIG = {
   MIN_CHAR: 8,
+  CONDITION_MINIMUM_CLASS: 'strengthMeter__minimum',
+  CONDITION_SPECIAL_CLASS: 'strengthMeter__special',
+  CONDITION_NUMERIC_CLASS: 'strengthMeter__numeric',
+  CONDITION_UPPERCASE_CLASS: 'strengthMeter__uppercase',
+  CONDITION_LOWERCASE_CLASS: 'strengthMeter__lowercase',
 };
 
 const passwordField = document.querySelector('.js-form__password');
@@ -19,7 +24,9 @@ function hasUppercase(value) {
 }
 
 function hasLowercase(value) {
-  const reg = /[a-z\u00C0-\u00FF]/; // should cover most Latin based characters
+  /* Should cover most Latin and Nordic characters. 
+  Unfortunately, does not cover Slavic chars. */
+  const reg = /[a-z\u00C0-\u00FF]/;
   return reg.test(value);
 }
 
@@ -29,11 +36,21 @@ function hasSpecialChar(value) {
 }
 
 function validate(value) {
-  console.log('hasNum: ' + hasNum(value));
-  console.log('hasMinChar: ' + hasMinChar(value));
-  console.log('hasUppercase: ' + hasUppercase(value));
-  console.log('hasLowercase: ' + hasLowercase(value));
-  console.log('hasSpecialChar: ' + hasSpecialChar(value));
+  if (hasNum(value)) {
+    document.querySelector(`.${CONFIG.CONDITION_NUMERIC_CLASS}`).classList.add('valid');
+  }
+  if (hasMinChar(value)) {
+    document.querySelector(`.${CONFIG.CONDITION_MINIMUM_CLASS}`).classList.add('valid');
+  }
+  if (hasUppercase(value)) {
+    document.querySelector(`.${CONFIG.CONDITION_UPPERCASE_CLASS}`).classList.add('valid');
+  }
+  if (hasLowercase(value)) {
+    document.querySelector(`.${CONFIG.CONDITION_LOWERCASE_CLASS}`).classList.add('valid');
+  }
+  if (hasSpecialChar(value)) {
+    document.querySelector(`.${CONFIG.CONDITION_SPECIAL_CLASS}`).classList.add('valid');
+  }
 }
 
 if (passwordField) {

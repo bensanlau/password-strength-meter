@@ -18,4 +18,8 @@
   /* Border radius */
   --borderRadiusS: 4px;
   --borderRadiusM: 12px;
+
+  /* Animation */
+  --animateSlow: 0.3s;
+  --animateFast: 0.15s;
 }

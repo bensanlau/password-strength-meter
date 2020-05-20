@@ -1,6 +1,3 @@
-.strengthMeter {
-}
-
 .strengthMeter ul {
   list-style: none;
   padding: 0;
@@ -12,10 +9,19 @@
   width: calc(50% - var(--spacingXS));
   margin: 2px 4px;
   float: left;
+  transition: var(--animateFast) color;
 }
 
 .strengthMeter li::before {
   content: '❌';
   display: inline-block;
   margin-right: 4px;
+}
+
+.strengthMeter .valid {
+  color: var(--c_silverChalice);
+}
+
+.strengthMeter .valid::before {
+  content: '✅';
 }
