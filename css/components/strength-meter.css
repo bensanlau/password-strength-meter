@@ -1,0 +1,21 @@
+.strengthMeter {
+}
+
+.strengthMeter ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.strengthMeter li {
+  width: calc(50% - var(--spacingXS));
+  margin: 2px 4px;
+  float: left;
+}
+
+.strengthMeter li::before {
+  content: '❌';
+  display: inline-block;
+  margin-right: 4px;
+}
