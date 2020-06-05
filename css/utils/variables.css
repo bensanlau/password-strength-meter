@@ -1,6 +1,7 @@
 :root {
   /* Colours */
   --c_primary: #0073b1;
+  --c_primary-darker: #006097;
 
   --c_text-primary: #333;
   --c_white: #fff;

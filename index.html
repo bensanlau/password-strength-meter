@@ -10,7 +10,7 @@
   <main>
 
     <div class="card">
-      <form action="" class="form">
+      <form action="" class="form" method="POST">
         <div class="form__row">
           <label class="form__label" for="email">Email</label>
           <input class="form__input" type="email" name="email" id="email" />
@@ -21,12 +21,13 @@
         </div>
         <div class="form__row">
           <div class="strengthMeter">
+            Your password must contain:
             <ul>
               <li class="strengthMeter__minimum">Minimum 8 characters</li>
-              <li class="strengthMeter__special">Contain a special character</li>
-              <li class="strengthMeter__numeric">Contain one number</li>
-              <li class="strengthMeter__uppercase">Contain an uppercase letter</li>
-              <li class="strengthMeter__lowercase">Contain a lowercase letter</li>
+              <li class="strengthMeter__special">A special character</li>
+              <li class="strengthMeter__numeric">One number</li>
+              <li class="strengthMeter__uppercase">An uppercase letter</li>
+              <li class="strengthMeter__lowercase">A lowercase letter</li>
             </ul>
 <!--
   
@@ -35,7 +36,7 @@
 -->
 </div>
         </div>
-        <input class="button button--primary" type="submit" value="Log in" />
+        <input class="button button--primary" type="submit" value="Sign up" />
       </form>
     </div>
 
